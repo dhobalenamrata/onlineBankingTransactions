@@ -35,6 +35,7 @@ Folder Hierarchy :
         │
         └── README.md                              # Project documentation
 
-This setup makes it clear that PhonePe and GPay are part of the BLC package, keeping all business logic components organized within specific packages and promoting code reusability and modularity.
+This setup makes it clear that PhonePe and GPay are part of the BLC package, keeping all business logic components organized
+within specific packages and promoting code reusability and modularity.
 
 

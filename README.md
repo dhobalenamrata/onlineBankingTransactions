@@ -30,7 +30,6 @@ Folder Hierarchy :
         │   │   └── UPIiD.java                     # Transaction by UPI ID
         │   │
         │   └── BankingTransactions/
-        │       ├── BLC.java                       # Core business logic integrating GPay and PhonePe
         │       └── MySystem.java                  # Main class, initializes system and handles transactions
         │
         └── README.md                              # Project documentation

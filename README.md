@@ -2,30 +2,32 @@ The onlineBankingTransactions project is organized into five main packages, with
 
 Folder Hierarchy :
     onlineBankingTransactions/
-    │
-    ├── src/
-    │   ├── BankAccount/
-    │   │   ├── BankAccount.java
-    │   │   ├── InvalidTransaction.java
-    │   │   ├── InsufficientBalanceException.java
-    │   │   └── NegativeAmountException.java
-    │   │
-    │   ├── GooglePe/
-    │   │   └── GPay.java(BLC)
-    │   │
-    │   ├── PhonePe/
-    │   │   └── PhonePe.java(BLC)
-    │   │
-    │   ├── TransactionByUsing/
-    │   │   ├── AccountNumber.java
-    │   │   ├── MobileNumber.java
-    │   │   ├── QR.java
-    │   │   └── UPIiD.java
-    │   │
-    │   └── BankingTransactions/
-    │       └── MySystem.java(ELC)
-    │
-    └── README.md
+│
+├── src/
+│   ├── BankAccount/
+│   │   ├── BankAccount.java               # Holds core account info (balance, accNo, mobNo)
+│   │   ├── InvalidTransaction.java        # Custom exception for invalid transactions
+│   │   ├── InsufficientBalanceException.java # Exception for insufficient balance errors
+│   │   └── NegativeAmountException.java   # Exception for negative amount transactions
+│   │
+│   ├── GooglePe/
+│   │   └── GPay.java                      # Part of BLC; represents Google Pay functionality
+│   │
+│   ├── PhonePe/
+│   │   └── PhonePe.java                   # Part of BLC; represents PhonePe functionality
+│   │
+│   ├── TransactionByUsing/
+│   │   ├── AccountNumber.java             # Transaction by account number
+│   │   ├── MobileNumber.java              # Transaction by mobile number
+│   │   ├── QR.java                        # Transaction by QR code
+│   │   └── UPIiD.java                     # Transaction by UPI ID
+│   │
+│   └── BankingTransactions/
+│       ├── BLC.java                       # Core business logic integrating GPay and PhonePe
+│       └── MySystem.java                  # Main class, initializes system and handles transactions
+│
+└── README.md                              # Project documentation
+
 This setup makes it clear that PhonePe and GPay are part of the BLC package, keeping all business logic components organized within specific packages and promoting code reusability and modularity.
 
 

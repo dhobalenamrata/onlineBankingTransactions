@@ -7,7 +7,7 @@ TransactionByUsing: Provides transaction methods like Account Number, Mobile Num
 BankingTransactions: Holds the core business logic and the main system entry class.
 
 Folder Hierarchy :
-        ```plaintext
+```plaintext
         onlineBankingTransactions/
         │
         ├── src/

@@ -1,8 +1,15 @@
 package com.nit.BankingTransactions;
 
 import java.util.Scanner;
+import java.util.Set;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 import com.nit.BankAccount.BankAccount;
+import com.nit.BankAccount.InsufficiantBalanceException;
 import com.nit.BankAccount.InvalidTrancation;
+import com.nit.BankAccount.NegativeAmountException;
 import com.nit.GooglePe.GPay;
 import com.nit.PhonePe.PhonePe;
 import com.nit.TransactionByUsing.*;
@@ -43,7 +50,14 @@ public class MySystem implements Runnable{
 				((PhonePe) transactionBy).makePayment(transactionTo, amount);
 			} catch (InvalidTrancation e) {
 				System.err.println(e.getMessage());
+			} catch(InsufficiantBalanceException e) {
+				e.printStackTrace();
+			} catch(NegativeAmountException e) {
+				System.err.println(e.getMessage());
+			} catch(Exception e) {
+				e.printStackTrace();
 			}
+			
 		}
 		else if(transactionBy instanceof GPay) {
 			try {
@@ -51,11 +65,16 @@ public class MySystem implements Runnable{
 			} catch (InvalidTrancation e) {
 				// TODO Auto-generated catch block
 				System.err.println(e.getMessage());
+			} catch(InsufficiantBalanceException e) {
+				e.printStackTrace();
+			} catch(NegativeAmountException e) {
+				System.err.println(e.getMessage());
+			} catch(Exception e) {
+				e.printStackTrace();
 			}
-		}
+		} 
 		else {
 			System.err.println("The object you have provided is not a type of any Banking Transaction App.");
-			
 		}
 		
 	}
